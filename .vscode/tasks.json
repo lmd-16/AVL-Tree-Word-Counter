@@ -1,0 +1,22 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+      {
+          "label": "build",
+          "type": "shell",
+          "command": "clang++",
+          "args": [
+              "-g",          // Optional: for debugging symbols
+              "${file}",     // Compile current file
+              "-o",
+              "${fileDirname}/${fileBasenameNoExtension}" // Output executable
+          ],
+          "group": {
+              "kind": "build",
+              "isDefault": true
+          },
+          "problemMatcher": ["$gcc"],
+          "detail": "Generated task for Clang++"
+      }
+  ]
+}
